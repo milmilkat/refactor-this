@@ -1,21 +1,23 @@
 # Changes
 
-## for Separation of Concern
+## Basic Refactorings
 - A new DB folder created
 - Handler moved to the DB folder
 - All DB transactions will take place in the DB Handler class
-- ConnectionString changed to readonly rather than const
+- ConnectionString moved into Configurations
 - Removed static method that can return instances of the same ConString
 - No need for bool isNew
+- Some changes of consistency of Models
 
-## Design Pattern
+## Extendibility
 - Helper classes inheritence from the main Helper
-- The main helper do not need to be used, it is abstract
-- Main helper having the protected Con to be used by the inherited classes
+- Using General formats, implementing something like Entity Framework
 
 ## SQL Injection Prevention
 - Add with parameter for DB queries
 
 ## Future
-- Making all DB calls to be async
+- Making all calls to be async
+- Documentation
+- Testing
 
